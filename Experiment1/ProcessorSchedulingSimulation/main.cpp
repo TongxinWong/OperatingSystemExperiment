@@ -26,13 +26,6 @@ void SplitString(const string& s, vector<string>& tokens, const string& delimite
 //向就绪队列中加入进程，按照优先数决定插入位置，实际上是由链表实现
 void AddProcess(PCB* ready_queue, PCB* new_process)
 {
-	if (ready_queue->next_process == NULL)
-	{
-		ready_queue->next_process = new_process;
-		new_process->next_process = NULL;
-		return;
-	}
-
 	PCB* tmp_process = ready_queue;
 	int check_number = new_process->priority_number;
 
