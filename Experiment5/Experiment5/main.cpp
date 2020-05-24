@@ -208,6 +208,10 @@ int main()
 	p1->is_producer = true;	//将该进程置为生产者进程
 	PC = 0;
 	ScheduleProcess();
+	delete s1;
+	delete s2;
+	delete p1;
+	delete p2;
 	system("pause");
 	return 0;
 }
