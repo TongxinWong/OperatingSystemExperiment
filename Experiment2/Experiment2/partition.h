@@ -12,7 +12,7 @@ typedef struct node
 //已分配的分区
 typedef struct allocated_node
 {
-	int pid;
+	std::string pid;
 	allocated_node* next_partition;	//指向表中下一项地址
 	int start_address;
 	int length;

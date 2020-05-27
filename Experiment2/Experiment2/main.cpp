@@ -83,7 +83,7 @@ partition* FindUnderAdjacency(partition* free_list, allocated_partition* p)
 }
 
 //主存分配
-bool Allocate(partition* free_list, allocated_partition* allocated_list, int pid, int length)
+bool Allocate(partition* free_list, allocated_partition* allocated_list, string pid, int length)
 {
 	if (length == 0)
 	{
@@ -128,7 +128,7 @@ bool Allocate(partition* free_list, allocated_partition* allocated_list, int pid
 }
 
 //主存回收
-bool Recycle(allocated_partition* allocated_list, partition* free_list, int pid)
+bool Recycle(allocated_partition* allocated_list, partition* free_list, string pid)
 {
 	allocated_partition* pre = allocated_list;
 	allocated_partition* tmp = pre->next_partition;
@@ -303,7 +303,7 @@ int main()
 
 		if (request_info[0] == "allocate")
 		{
-			bool res = Allocate(free_partition_list, allocated_partition_list, stoi(request_info[1]), stoi(request_info[2]));
+			bool res = Allocate(free_partition_list, allocated_partition_list, request_info[1], stoi(request_info[2]));
 			if (res)
 			{
 				cout << "分配完成后当前状态" << endl;
@@ -319,7 +319,7 @@ int main()
 		}
 		else if (request_info[0] == "recycle")
 		{
-			bool res = Recycle(allocated_partition_list, free_partition_list, stoi(request_info[1]));
+			bool res = Recycle(allocated_partition_list, free_partition_list, request_info[1]);
 			if (res)
 			{
 				cout << "回收完成后当前状态" << endl;
