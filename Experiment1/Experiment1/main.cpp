@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <fstream>
 #include <vector>
+#include <string>
 #include <Windows.h>
 #include "pcb.h"
 using namespace std;
@@ -46,7 +47,7 @@ void ScheduleProcess(PCB* ready_queue, vector<string>& finished_processes)
 	//就绪队列已经按照优先数进行排序，选取就绪队列的第一个进程
 	PCB* running_process = ready_queue->next_process;
 	ready_queue->next_process = running_process->next_process;
-	
+
 	cout << "当前正在运行的进程：" << running_process->process_name << "     ";
 	cout << "进程就绪队列：";
 	PCB* tmp = ready_queue->next_process;

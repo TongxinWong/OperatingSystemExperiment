@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 
 //R-¾ÍĞ÷£¬E-½áÊø
 enum ProcessState { R, E };

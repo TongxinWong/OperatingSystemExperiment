@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{10CD29D7-53F2-45D6-BAF4-5827B771D571}</ProjectGuid>
-    <RootNamespace>ProcessorSchedulingSimulation</RootNamespace>
+    <ProjectGuid>{1E5F8FC8-7B7E-41D6-9026-0E499EE8BC84}</ProjectGuid>
+    <RootNamespace>Experiment1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,10 +115,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClInclude Include="pcb.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pcb.h" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
